@@ -18,6 +18,13 @@ class CarBuildingDirector
     builder.produce
   end
 
+  def build_school_bus
+    builder.reset
+    builder.configure_seats(40)
+    builder.configure_engine(200)
+    builder.produce
+  end
+
   private
 
   attr_reader :builder

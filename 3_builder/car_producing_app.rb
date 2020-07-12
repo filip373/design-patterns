@@ -14,6 +14,10 @@ puts("Driving city car...")
 city_car = real_cars_director.build_city_car
 city_car.drive
 
+puts("Driving school bus...")
+school_bus = real_cars_director.build_school_bus
+school_bus.drive
+
 puts("Using car manuals director...")
 puts("Reading racing car manual...")
 racing_car_manual = car_manuals_director.build_racing_car
@@ -22,3 +26,7 @@ racing_car_manual.read
 puts("Reading city car manual...")
 city_car_manual = car_manuals_director.build_city_car
 city_car_manual.read
+
+puts("Reading school bus manual...")
+school_bus_manual = car_manuals_director.build_school_bus
+school_bus_manual.read
