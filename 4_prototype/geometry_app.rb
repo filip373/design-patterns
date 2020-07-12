@@ -1,5 +1,6 @@
 require_relative "./shapes/circle"
 require_relative "./shapes/square"
+require_relative "./shapes/line"
 
 puts("Creating a first circle prototype...")
 circle1 = Circle.new(4, "red")
@@ -35,3 +36,15 @@ square_clone.speak_up("Marek")
 
 puts("Comparing squares object_ids...")
 puts("Original: #{square.object_id}, clone: #{square_clone.object_id}")
+puts
+
+puts("Creating a line prototype...")
+line = Line.new("Tomek")
+line.hello
+
+puts("Cloning it...")
+line_clone = line.clone
+line_clone.hello
+
+puts("Comparing lines object_ids...")
+puts("Original: #{line.object_id}, clone: #{line_clone.object_id}")
