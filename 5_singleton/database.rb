@@ -1,6 +1,12 @@
 class Database
+  @mutex = Mutex.new
+
   def self.get_instance
-    @instance ||= new("localhost:777")
+    return @instance if @instance
+
+    @mutex.synchronize do
+      @instance ||= new("localhost:777")
+    end
   end
 
   def initialize(url)
