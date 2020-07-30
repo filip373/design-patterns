@@ -1,5 +1,6 @@
 require_relative "./youtube_lib.rb"
 require_relative "./cached_youtube_lib.rb"
+require_relative "./logged_youtube_lib.rb"
 
 puts("Using plain youtube lib...")
 youtube_lib = YoutubeLib.new
@@ -24,3 +25,15 @@ puts(cached_youtube_lib.download_video(2))
 
 puts("Let's download it again...")
 puts(cached_youtube_lib.download_video(2))
+
+puts("Using logged youtube lib...")
+logged_youtube_lib = LoggedYoutubeLib.new
+
+puts("Let's download something...")
+puts(logged_youtube_lib.download_video(1))
+
+puts("Let's download something else...")
+puts(logged_youtube_lib.download_video(2))
+
+puts("Let's download it again...")
+puts(logged_youtube_lib.download_video(2))
